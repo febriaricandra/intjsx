@@ -1,11 +1,11 @@
 import { useState } from "react";
-
+import Layout from "./routes/Layout";
 function App() {
 
   return (
-    <>
-      <h1 className="text-red-700">hello world</h1>
-    </>
+    <div className="overflow-hidden">
+      <Layout />
+    </div>
   );
 }
 
