@@ -9,6 +9,7 @@ import { Search } from "lucide-react";
 import { Github } from "lucide-react";
 
 import Dashboard from "./root/Dashboard";
+import Alerts from "./root/Alerts";
 
 export default function Layout() {
   const [activeTab, setActiveTab] = useState(1);
@@ -32,10 +33,10 @@ export default function Layout() {
     },
     {
       id: 2,
-      title: "Settings",
+      title: "Alerts",
       type: "primary",
       icon: <AppWindow size={24} />,
-      content: <div>peler</div>,
+      content: <Alerts />,
     },
     {
       id: 3,
@@ -51,8 +52,6 @@ export default function Layout() {
     <div className="flex w-full h-screen bg-black false">
       {/* <Sidebar /> */}
       <div className="w-1/5 z-30 flex-shrink-0 hidden w-64 overflow-y-auto lg:block">
-        {/* <Sidebar type="primary" /> */}
-        {/* <Sidebar type="secondary" /> */}
         <div className="py-4 text-gray-500 dark:text-gray-400">
           <h1 className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200">
             Dashboard
@@ -138,12 +137,12 @@ export default function Layout() {
         </div>
         {/* Page Dashboard End */}
       </div>
-      <aside class="fixed bottom-4 end-4 z-50 flex items-center justify-center gap-4 rounded-lg bg-black px-5 py-3 text-white">
+      <aside className="fixed bottom-4 end-4 z-50 flex items-center justify-center gap-4 rounded-lg bg-white px-5 py-3 text-black">
         <a
-          href="/new-thing"
+          href="https://saweria.co/febriaricandra"
           target="_blank"
           rel="noreferrer"
-          class="text-sm font-medium hover:opacity-75"
+          className="text-sm font-medium hover:opacity-75"
         >
           Hey! if you have more money, you can buy me a coffee👋🏻
         </a>
