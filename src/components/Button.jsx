@@ -2,7 +2,7 @@ import React from "react";
 import { cva } from "class-variance-authority";
 
 export default function Button({intent, size, className, ...props}) {
-  const button = cva("button", {
+  const button = cva("rounded button", {
     variants: {
       intent: {
         primary: [

@@ -6,7 +6,7 @@ import {AlertTriangle} from 'lucide-react'
 import { Ban} from 'lucide-react'
 
 function Alert({intent, title}) {
-  const alert = cva(["relative my-4 block w-full text-base font-regular px-4 py-4 rounded-lg flex"], {
+  const alert = cva(["relative transition duration-1000 ease-in-out my-4 shadow-xl block w-full text-base font-regular px-4 py-4 rounded-lg flex"], {
     variants: {
       intent: {
         info: [
