@@ -1,10 +1,12 @@
-import React from 'react'
-import Modal from '../../components/Modal'
+import React from "react";
+import Modal from "../../components/Modal";
 
 export default function Modals() {
   return (
     <div>
-        <Modal />
+      <Modal header="test">
+        <p>test</p>
+      </Modal>
     </div>
-  )
+  );
 }

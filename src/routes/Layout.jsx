@@ -7,7 +7,6 @@ import { AppWindow } from "lucide-react";
 import { Scaling } from "lucide-react";
 import { Search } from "lucide-react";
 import { Github } from "lucide-react";
-import { AlignLeft } from "lucide-react";
 
 import Dashboard from "./root/Dashboard";
 import Alerts from "./root/Alerts";
@@ -15,20 +14,15 @@ import Modals from "./root/Modals";
 
 export default function Layout() {
   const [activeTab, setActiveTab] = useState(1);
-  const [click, closeClick] = useState(false);
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
   };
-
   const [open, setOpen] = useState(false);
 
   const clickOpen = () => {
     setOpen(!open);
     console.log(open);
   };
-  const clickSidebar = () => {
-    closeClick(!click);
-  }
 
   const listMenu = [
     {
@@ -47,7 +41,7 @@ export default function Layout() {
     },
     {
       id: 3,
-      title: "Modal",
+      title: "Profile",
       type: "primary",
       icon: <Scaling size={24} />,
       content: <Modals />,
@@ -58,11 +52,7 @@ export default function Layout() {
   return (
     <div className="flex w-full h-screen bg-black false">
       {/* <Sidebar /> */}
-      <div className={
-        click ?
-        "w-1/5 z-30 flex-shrink-0 w-64 overflow-y-auto block"
-        : "w-1/5 z-30 flex-shrink-0 w-64 overflow-y-auto lg:block hidden"
-      }>
+      <div className="w-1/5 z-30 flex-shrink-0 hidden w-64 overflow-y-auto lg:block">
         <div className="py-4 text-gray-500 dark:text-gray-400">
           <h1 className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200">
             Dashboard
@@ -88,11 +78,6 @@ export default function Layout() {
         <header className="z-40 py-4 shadow-bottom bg-black">
           <div className="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300">
             <div className="flex justify-center flex-1 lg:mr-32">
-              <div className="mx-4 lg:hidden block flex items-center">
-                <button onClick={clickSidebar}>
-                  <AlignLeft size={24} />
-                </button>
-              </div>
               <div className="relative w-full max-w-xl mr-6 text-white focus-within:text-purple-500">
                 <div className="absolute inset-y-0 flex items-center pl-2">
                   <Search size={18} />

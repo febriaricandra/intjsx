@@ -4,20 +4,6 @@ import Button from '../../components/Button'
 
 export default function Alerts() {
   const [open, setOpen] = useState(false)
-  const alertPopup = [
-    {
-      type: 'info',
-    },
-    {
-      type: 'error',
-    },
-    {
-      type: 'success',
-    },
-    {
-      type: 'warning',
-    },
-  ]
   const clickAlert = () => {
     setOpen(true)
     setTimeout(() => {
