@@ -7,10 +7,14 @@ import { AppWindow } from "lucide-react";
 import { Scaling } from "lucide-react";
 import { Search } from "lucide-react";
 import { Github } from "lucide-react";
+import { Command } from "lucide-react";
+import { MenuSquare } from "lucide-react";
 
 import Dashboard from "./root/Dashboard";
 import Alerts from "./root/Alerts";
 import Modals from "./root/Modals";
+import Buttons from "./root/Buttons";
+import Forms from "./root/Forms";
 
 export default function Layout() {
   const [activeTab, setActiveTab] = useState(1);
@@ -41,11 +45,25 @@ export default function Layout() {
     },
     {
       id: 3,
-      title: "Profile",
+      title: "Modals",
       type: "primary",
       icon: <Scaling size={24} />,
       content: <Modals />,
     },
+    {
+      id: 4,
+      title: "Buttons",
+      type: "primary",
+      icon: <Command size={24} />,
+      content: <Buttons />, 
+    },
+    {
+      id: 5,
+      title: "Forms",
+      type: "primary",
+      icon: <MenuSquare size={24} />,
+      content: <Forms />,
+    }
   ];
 
   const dataDropdown = ["Today", "Yesterday", "Last 7 Days", "Last 30 Days"];
@@ -138,7 +156,7 @@ export default function Layout() {
         </div>
         {/* Page Dashboard End */}
       </div>
-      <aside className="fixed bottom-4 end-4 z-50 flex items-center justify-center gap-4 rounded-lg bg-white px-5 py-3 text-black">
+      <aside className="fixed bottom-4 end-4 z-50 flex items-center justify-center gap-4 rounded-lg bg-white px-5 py-3 text-black sm:m-4">
         <a
           href="https://saweria.co/febriaricandra"
           target="_blank"
